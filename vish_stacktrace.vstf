@@ -1,0 +1,37 @@
+# Current time Sat Jan 11 09:53:27 2025
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 18 2018"
+# Platform = win64
+
+Exception c0000005 has occurred at address 02f26c66. Traceback:
+# 0    0x02f26c66: 'strstr + 0x14e'
+# 1    0x4019c640: 'Tclsqlite3_SafeInit + 0x167820'
+# 2    0x4019c772: 'Tclsqlite3_SafeInit + 0x167952'
+# 3    0x402ec3e3: 'Mtirpc_Init + 0x12a893'
+# 4    0x402ec511: 'Mtirpc_Init + 0x12a9c1'
+# 5    0x402e4a96: 'Mtirpc_Init + 0x122f46'
+# 6    0x402f3e0e: 'Mtirpc_Init + 0x1322be'
+# 7    0x4022a0e2: 'Mtirpc_Init + 0x68592'
+# 8    0x403f43e5: 'TPedit_Init + 0x403c5'
+# 9    0x4022779f: 'Mtirpc_Init + 0x65c4f'
+# 10   0x4016a868: 'Tclsqlite3_SafeInit + 0x135a48'
+# 11   0x640bb914: 'TclCallVarTraces + 0x2f4'
+# 12   0x640c8aa4: 'TclPtrMakeUpvar + 0x734'
+# 13   0x6405447b: 'Tcl_SetExitProc + 0x3c6b'
+# 14   0x63fe6c03: 'TclNRRunCallbacks + 0x63'
+# 15   0x63fe6c03: 'TclNRRunCallbacks + 0x63'
+# 16   0x640b92e2: 'TclpRealloc + 0xa02'
+# 17   0x640b965c: 'TclServiceIdle + 0x9c'
+# 18   0x6408d0c3: 'Tcl_DoOneEvent + 0x133'
+# 19   0x641daee5: 'Tk_MainLoop + 0x25'
+# 20   0x6421d282: 'Tk_MainEx + 0x932'
+# 21   0x401e4590: 'Mtirpc_Init + 0x22a40'
+# 22   0x401e6c38: 'Mtirpc_Init + 0x250e8'
+# 23   0x40626dd7: 'Tclsqlite_Init + 0x5717'
+# 24   0x2538259d: 'BaseThreadInitThunk + 0x1d'
+# 25   0x26acaf38: 'RtlUserThreadStart + 0x28'
+StackWalk failed 0
+# End of Stack Trace
+

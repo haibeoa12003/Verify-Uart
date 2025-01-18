@@ -1,0 +1,312 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.7c/examples
+T_opt
+!s110 1737168074
+V0G:d_dfG3PjLV0]8WgZKe0
+Z1 04 13 4 work uart_test_top fast 0
+=17-60189550332c-678b14ca-18d-3c28
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+T_opt1
+!s110 1737165639
+V4QMLdn0V;9Dk:G=SPOWCg2
+R1
+=1-60189550332c-678b0b47-177-45e8
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+R0
+XDriver_sv_unit
+Z4 !s115 uart_io
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z6 !s110 1737168072
+!i10b 1
+!s100 L7WNX4KNO3GM0NhQ;Zdi22
+IdLe4G2=h]0M]KOABkEP;B1
+VdLe4G2=h]0M]KOABkEP;B1
+!i103 1
+S1
+Z7 dC:/Users/84334/Downloads/UART_DV_19/final_project
+Z8 w1737168019
+8C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv
+Z9 FPacket.sv
+L0 3
+Z10 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z11 !s108 1737168072.000000
+!s107 Packet.sv|C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv|
+!i113 0
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@driver_sv_unit
+XGenerator_sv_unit
+R5
+R6
+!i10b 1
+!s100 2a5;]JWSl7K8bJFRU_h@`3
+IcW5G38ATh^6[Sb@3`k3:o2
+VcW5G38ATh^6[Sb@3`k3:o2
+!i103 1
+S1
+R7
+R8
+8C:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv
+R9
+L0 3
+R10
+r1
+!s85 0
+31
+R11
+!s107 Packet.sv|C:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv|
+!i113 0
+R12
+R2
+n@generator_sv_unit
+XOutputPacket_sv_unit
+R5
+R6
+!i10b 1
+!s100 JR43;TBk6X3HRYf7I?6z72
+IOEUn7VA_d1I[KJC2P4C8o0
+VOEUn7VA_d1I[KJC2P4C8o0
+!i103 1
+S1
+R7
+w1736498386
+8C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+L0 3
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv|
+!i113 0
+R12
+R2
+n@output@packet_sv_unit
+XPacket_sv_unit
+R5
+Z13 !s110 1737168071
+!i10b 1
+!s100 h[5hF3g5oNKA2ZhG]Y>O=1
+Ife[0VlDd]FAGf@4zP9AP21
+Vfe[0VlDd]FAGf@4zP9AP21
+!i103 1
+S1
+R7
+R8
+8C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv
+L0 3
+R10
+r1
+!s85 0
+31
+Z14 !s108 1737168071.000000
+!s107 C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv|
+!i113 0
+R12
+R2
+n@packet_sv_unit
+XReceiver_sv_unit
+R4
+R5
+R13
+!i10b 1
+!s100 c15Uf5=Xgjh5i<memH2O^1
+I0iK]PKPai7Tg0AAMz@h2o3
+V0iK]PKPai7Tg0AAMz@h2o3
+!i103 1
+S1
+R7
+w1737122284
+8C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
+Z15 FOutputPacket.sv
+L0 3
+R10
+r1
+!s85 0
+31
+R14
+!s107 OutputPacket.sv|C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv|
+!i113 0
+R12
+R2
+n@receiver_sv_unit
+XScoreboard_sv_unit
+R5
+R13
+!i10b 1
+!s100 NP>KSX3PFU3H@=;bcGC7a0
+IiCMW_57JRmW8fz7h?hPZ;3
+ViCMW_57JRmW8fz7h?hPZ;3
+!i103 1
+S1
+R7
+R8
+8C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
+R9
+R15
+L0 3
+R10
+r1
+!s85 0
+31
+R14
+!s107 OutputPacket.sv|Packet.sv|C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv|
+!i113 0
+R12
+R2
+n@scoreboard_sv_unit
+vuart
+R5
+R6
+!i10b 1
+!s100 @`E0336@=c?1c[^nLIOoD2
+I>GUCUY2FgWOC;f8:d<?8d1
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+!s105 uart_sv_unit
+S1
+R7
+w1737004576
+8C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv
+L0 1
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv|
+!i113 0
+R12
+R2
+Yuart_io
+R5
+R13
+!i10b 1
+!s100 fn@JlcV[b<9PRkABidc:_1
+I95^C^AK29EdF3=KGhJlnS3
+R16
+!s105 uart_if_sv_unit
+S1
+R7
+w1736573896
+8C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv
+L0 2
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv|
+!i113 0
+R12
+R2
+Xuart_tb_sv_unit
+R4
+R5
+VZXBD@Fo;BMFeG93<3AUVL0
+r1
+!s85 0
+!i10b 1
+!s100 j;N[l]@CK>d9o2@oMnXVn2
+IZXBD@Fo;BMFeG93<3AUVL0
+!i103 1
+S1
+R7
+Z17 w1737168070
+Z18 8C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv
+Z19 FC:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv
+FGenerator.sv
+R9
+FDriver.sv
+FScoreBoard.sv
+R15
+FReceiver.sv
+L0 3
+R10
+31
+R14
+Z20 !s107 Receiver.sv|OutputPacket.sv|ScoreBoard.sv|Driver.sv|Packet.sv|Generator.sv|C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv|
+!i113 0
+R12
+R2
+4uart_test
+R5
+DXx4 work 15 uart_tb_sv_unit 0 22 ZXBD@Fo;BMFeG93<3AUVL0
+R16
+r1
+!s85 0
+!i10b 1
+!s100 `Ee1AZM9V2V90_0ZEzJ]W2
+ImPFUCAefW14[RYJC;K`8D3
+!s105 uart_tb_sv_unit
+S1
+R7
+R17
+R18
+R19
+L0 5
+R10
+31
+R14
+R20
+R21
+!i113 0
+R12
+R2
+vuart_test_top
+R5
+R13
+!i10b 1
+!s100 BfZnImJIH6QklDi7hRfbB3
+IKB<<n^j5^XQ2]3IGNV?^c0
+R16
+!s105 uart_test_top_sv_unit
+S1
+R7
+w1737122216
+8C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
+FC:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
+L0 2
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv|
+!i113 0
+R12
+R2
