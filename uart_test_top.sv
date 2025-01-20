@@ -1,11 +1,12 @@
 
+// `timescale 1ns/1ps
 module uart_test_top;
 	parameter simulation_cycle = 20;
 
 	reg  SysClock;
 	
 	uart_io top_io(SysClock);
-  
+  rx_checker_module rx_checker(top_io);
 reg cts_n;
 reg tx;
 reg tx_done;

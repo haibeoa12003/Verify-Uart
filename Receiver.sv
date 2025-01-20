@@ -52,6 +52,7 @@ task Receiver::start();
 endtask
 
 task Receiver::recv();
+    
     int pkt_cnt = 0;
     get_payload();
     
@@ -74,5 +75,4 @@ task Receiver::get_payload();
 
   $display ($time, "[RECEIVER]  Getting Payload");
   $display ($time, "[RECEIVER]  Payload Contents: rx_data = %b", rx_data_cmp);
-
 endtask

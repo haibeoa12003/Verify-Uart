@@ -1,4 +1,4 @@
-
+// `timescale 1ns/1ps
  interface uart_io(input logic clk);
    logic reset_n;
    logic  rx;

@@ -9,7 +9,8 @@ class Driver ;
 	reg payload_stop_bit_num;
 	reg payload_parity_en;
 	reg payload_parity_type;
-     
+    reg payload_parity_bit;
+
   //mailbox in_box;	// Generator mailbox // QUESTA QUIRK
   typedef mailbox #(Packet) in_box_type;
   in_box_type in_box = new;
@@ -45,8 +46,10 @@ task Driver::start();
             this.payload_data_bit_num = pkt2send.data_bit_num;
             this.payload_stop_bit_num = pkt2send.stop_bit_num;
             this.payload_parity_en = pkt2send.parity_en;
-            this.payload_parity_type = pkt2send.parity_type;				
+            this.payload_parity_type = pkt2send.parity_type;
+            this.payload_parity_bit = pkt2send.parity_bit;				
         send_payload();
+        
         $display ($time, "[DRIVER] Sending payload %h", payload_rx);
         $display ($time, "ns:  [DRIVER] Sending in new packet END");
         $display ($time, "ns:  [DRIVER] Number of packets sent = %d", packets_sent);
@@ -56,7 +59,7 @@ task Driver::start();
         if(in_box.num() == 0) begin
 				  break;
 			  end
-		  	// repeat(439) @(posedge uart.clk);
+		  	// repeat(435) @(posedge uart.clk);
 	    end
         
 	join_none	
@@ -99,7 +102,10 @@ task Driver::send_payload();
         uart.cb.parity_type <= payload_parity_type;
         uart.cb.data_bit_num <= payload_data_bit_num;
         uart.cb.stop_bit_num <= payload_stop_bit_num;
+        
          @(posedge uart.clk);
+         uart.cb.rx <= 1'b1;
+        repeat(clock_divide) @(posedge uart.clk);
          //start_bit
         uart.cb.rx <= 1'b0;
         repeat(clock_divide) @(posedge uart.clk);
@@ -124,29 +130,8 @@ task Driver::send_payload();
 	    end
         //parity_bit
         if(payload_parity_en == 1) begin
-        case(count_data_bit_num)
-            5: begin
-                uart.cb.rx <= ((^temp_5_data) & payload_parity_en);
-                repeat(clock_divide) @(posedge uart.clk);
-            end
-            6:begin
-                uart.cb.rx <= ((^temp_6_data) & payload_parity_en);
-                repeat(clock_divide) @(posedge uart.clk);
-            end
-            7:begin
-                uart.cb.rx <= ((^temp_7_data) & payload_parity_en);
-                repeat(clock_divide) @(posedge uart.clk);
-            end
-            8:begin
-                uart.cb.rx <= ((^temp_8_data) & payload_parity_en);
-                repeat(clock_divide) @(posedge uart.clk);
-            end
-            default: begin
-                $display("Error: Parity bit not set");
-                uart.cb.rx <= 1'b0;
-                repeat(clock_divide) @(posedge uart.clk);
-            end
-        endcase
+            uart.cb.rx <= payload_parity_bit;
+            repeat(clock_divide) @(posedge uart.clk);
         end
         // stop_bit
         if(payload_stop_bit_num == 1'b0) begin
