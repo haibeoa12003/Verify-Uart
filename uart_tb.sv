@@ -15,7 +15,7 @@ program uart_test (uart_io.TB uart);
     // string 		test_name = TEST_NAME;
 	
 	initial begin
-		number_packets 		 = 2;
+		number_packets 		 = 30;
     	generator			 = new("Generator", number_packets);
 		sb					 = new(); // NOTE THAT THERE ARE DEFAULT VALUES FOR THE NEW FUNCTION 
 					      // FOR THE SCOREBOARD 

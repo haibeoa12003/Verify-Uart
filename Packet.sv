@@ -12,8 +12,8 @@
     extern function new(string name = "Packet");
 
     constraint base_test {
-		 rx dist	{0:=1000,[1:4]:=1,8'h05:=1000, [6:9]:=1000,8'h0A:=1000, [11:159]:=1, 8'hA0:=1000,[161:254]:=1 , 8'hff:=1000};
-    // rx inside {8'b10101010};
+		//  rx dist	{0:=1000,[1:4]:=1,8'h05:=1000, [6:9]:=1000,8'h0A:=1000, [11:159]:=1, 8'hA0:=1000,[161:254]:=1 , 8'hff:=1000};
+    rx inside {8'b10101010};
         data_bit_num inside {[0:3]};
         stop_bit_num inside {[0:1]};
         parity_en inside {[0:1]};

@@ -16,18 +16,11 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	uart_test
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:
 	--none--
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling module uart_test_top
-
-Top level modules:
-	uart_test_top
 
 } {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/ap_checker.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/ap_checker.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
@@ -37,7 +30,14 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	rx_checker_module
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module uart_test_top
+
+Top level modules:
+	uart_test_top
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:
@@ -56,17 +56,12 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	--none--
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module uart
 
 Top level modules:
-	--none--
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-
-Top level modules:
-	--none--
+	uart
 
 } {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
@@ -74,11 +69,10 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	--none--
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart.sv
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling module uart
 
 Top level modules:
-	uart
+	--none--
 
 } {} {}}
