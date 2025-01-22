@@ -29,38 +29,6 @@ reg tx_done;
         .tx_done(tx_done)
 	);
     
-  /* ------------- TEST NAME ------------------------
-  1. all_top                            // Generate all operations
-
-  2. arith_logic                        // Generate all arithmetic operations
-    2.1 arith_logic_and_only_add        // Only add operation
-    2.2 arith_logic_and_only_hadd       // Only hadd operation
-    2.3 arith_logic_and_only_sub        // Only sub operation
-    2.4 arith_logic_and_only_not        // Only not operation
-    2.5 arith_logic_and_only_and        // Only and operation
-    2.6 arith_logic_and_only_or         // Only or operation
-    2.7 arith_logic_and_only_xor        // Only xor operation
-    2.8 arith_logic_and_only_lhg        // Only lhg operation
-    
-  3. shift_reg                          // Generate all shift register operations
-    3.1 shift_reg_and_only_shleftlog    // Only shift left logic
-    3.2 shift_reg_and_only_shleftart    // Only shift left arithmetic
-    3.3 shift_reg_and_only_shrghtlog    // Only shift right logigc
-    3.4 shift_reg_and_only_shrghtart    // Only shift right arithmetic
-    
-  4. mem_read                           // Generate all memory read operations
-    4.1 mem_read_and_only_loadbyte      // Only load byte operation
-    4.1 mem_read_and_only_loadbyteu     // Only load byte unsigned operation
-    4.1 mem_read_and_only_loadhalf      // Only load half operation
-    4.1 mem_read_and_only_loadhalfu     // Only load half unsigned operation
-    4.1 mem_read_and_only_loadword      // Only load word operation
-      
-  5. mem_write                          // Generate all memory write operation
-  6. arith_and_shift
-  7. testlab4
-	----------------------------------------------------*/
-  
-
 	uart_test test(top_io);   		
 	
 	initial
@@ -75,7 +43,7 @@ reg tx_done;
 	end
   initial begin
     top_io.reset_n = 0;
-    # 100
-   top_io.reset_n = 1;
-  end
+     repeat(435) @(posedge SysClock);
+    top_io.reset_n = 1;
+   end
 endmodule

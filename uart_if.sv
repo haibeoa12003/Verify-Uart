@@ -10,7 +10,6 @@
    logic rts_n;
    logic rx_done;
    logic parity_error;
-
  clocking cb @(posedge clk);
    default input #1 output #1;
    output rx;

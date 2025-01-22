@@ -1,4 +1,29 @@
-C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling package uart_tb_sv_unit
+** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
+-- Compiling program uart_test
+** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
+
+Top level modules:
+	uart_test
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module uart_test_top
+
+Top level modules:
+	uart_test_top
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:
@@ -11,13 +36,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:
 	rx_checker_module
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling module uart_test_top
-
-Top level modules:
-	uart_test_top
 
 } {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018

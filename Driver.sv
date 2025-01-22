@@ -49,7 +49,6 @@ task Driver::start();
             this.payload_parity_type = pkt2send.parity_type;
             this.payload_parity_bit = pkt2send.parity_bit;				
         send_payload();
-        
         $display ($time, "[DRIVER] Sending payload %h", payload_rx);
         $display ($time, "ns:  [DRIVER] Sending in new packet END");
         $display ($time, "ns:  [DRIVER] Number of packets sent = %d", packets_sent);
@@ -98,6 +97,7 @@ task Driver::send_payload();
     //count stop_bit_num
 
 	$display($time, "ns:  [DRIVER] Sending Payload Begin");
+        wait(uart.cb.rx_done == 1);
         uart.cb.parity_en <= payload_parity_en;
         uart.cb.parity_type <= payload_parity_type;
         uart.cb.data_bit_num <= payload_data_bit_num;
@@ -136,15 +136,22 @@ task Driver::send_payload();
         // stop_bit
         if(payload_stop_bit_num == 1'b0) begin
             uart.cb.rx <= 1'b1;
-            repeat(clock_divide) @(posedge uart.clk);
         end
         else if(payload_stop_bit_num == 1'b1) begin
             uart.cb.rx <= 1'b1;
             repeat(clock_divide) @(posedge uart.clk);
             uart.cb.rx <= 1'b1;
-            repeat(clock_divide) @(posedge uart.clk);
+            // repeat(clock_divide) @(posedge uart.clk);
         end
-        
+        repeat(clock_divide) @(posedge uart.clk);
+        @(negedge uart.cb.rts_n);
 	// This is where we would be sending the data out into a queue for the Scoreboard
 endtask
+
+
+
+
+
+
+
 

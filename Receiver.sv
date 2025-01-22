@@ -72,7 +72,7 @@ task Receiver::get_payload();
   rts_n_cmp = uart.cb.rts_n;
   rx_done_cmp = uart.cb.rx_done; //This will be 1
   parity_error_cmp = uart.cb.parity_error;
-
+  repeat(435) @(posedge uart.clk);
   $display ($time, "[RECEIVER]  Getting Payload");
   $display ($time, "[RECEIVER]  Payload Contents: rx_data = %b", rx_data_cmp);
 endtask
