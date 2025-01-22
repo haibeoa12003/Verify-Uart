@@ -38,6 +38,94 @@ class Scoreboard;
   extern virtual task start();
   extern virtual task check();
   extern         task result();
+  real coverage1,coverage2;
+
+  covergroup all_opeation_receive;
+    CVP_PARITY_ERROR:coverpoint pkt_cmp.parity_error{
+      option.auto_bin_max = {0};
+      bins Noerror = {0};
+      bins Error = {1};
+    }
+    CVP_RX_DONE:coverpoint pkt_cmp.rx_done{
+      option.auto_bin_max = {0};
+      bins Nodone = {0};
+      bins Done = {1};
+    }
+    CVP_RTS_N:coverpoint pkt_cmp.rts_n{
+      option.auto_bin_max = {0};
+      bins Request = {0};
+      bins Norequest = {1};
+    }
+    rx_data_cov:coverpoint pkt_cmp.rx_data {
+      option.auto_bin_max = {0};
+      bins zero ={0};
+      bins allfs = {8'hff};
+      bins specia1 = {8'h0a};
+      bins special2 = {8'h05};
+    }
+    rx_cov: coverpoint pkt_sent.rx {
+      option.auto_bin_max = {0};
+      bins zero ={0};
+      bins allfs = {8'hff};
+      bins specia1 = {8'h0a};
+      bins special2 = {8'h05};
+    }
+    data_bit_num_cov: coverpoint pkt_sent.data_bit_num {
+      option.auto_bin_max = {0};
+      bins fives_data_bit ={0};
+      bins sixs_data_bit = {1};
+      bins sevens_data_bit = {2};
+      bins eights_data_bit = {3};
+    }
+    stop_bit_num_cov: coverpoint pkt_sent.stop_bit_num {
+      option.auto_bin_max = {0};
+      bins one_stop_bit ={0};
+      bins two_stop_bit = {1};
+    }
+    parity_en_cov: coverpoint pkt_sent.parity_en {
+      option.auto_bin_max = {0};
+      bins enable ={0};
+      bins ddisable = {1};
+    }
+    parity_type_cov: coverpoint pkt_sent.parity_type {
+      option.auto_bin_max = {0};
+      bins odd_parity ={0};
+      bins even_parity = {1};
+    }
+    CVP_PARITY_EN: cross parity_en_cov, parity_type_cov,rx_cov,data_bit_num_cov,stop_bit_num_cov{
+      option.cross_auto_bin_max = 0;
+      bins Disable = binsof(parity_en_cov.enable) && binsof(parity_type_cov)&&
+                     binsof(stop_bit_num_cov)&&binsof(data_bit_num_cov) &&binsof(rx_cov);
+      bins Enable = binsof(parity_en_cov.ddisable) && binsof(parity_type_cov)&&
+                      binsof(stop_bit_num_cov)&&binsof(data_bit_num_cov) &&binsof(rx_cov);
+    }
+    CVP_DATA_BIT_NUM: cross   parity_en_cov, parity_type_cov,rx_cov,data_bit_num_cov,stop_bit_num_cov{
+      option.cross_auto_bin_max = 0;
+      bins fives = binsof(data_bit_num_cov.fives_data_bit) && binsof(parity_en_cov)&&
+                     binsof(stop_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+      bins sixs = binsof(data_bit_num_cov.sixs_data_bit) && binsof(parity_en_cov)&&
+                      binsof(stop_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+      bins sevens = binsof(data_bit_num_cov.sevens_data_bit) && binsof(parity_en_cov)&&
+                      binsof(stop_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+      bins eights = binsof(data_bit_num_cov.eights_data_bit) && binsof(parity_en_cov)&&
+                      binsof(stop_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+    }
+    CVP_STOP_BIT_NUM: cross   parity_en_cov, parity_type_cov,rx_cov,data_bit_num_cov,stop_bit_num_cov{
+      // option.cross_auto_bin_max = 0;
+      bins one = binsof(stop_bit_num_cov.one_stop_bit) && binsof(parity_en_cov)&&
+                     binsof(data_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+      bins two = binsof(stop_bit_num_cov.two_stop_bit) && binsof(parity_en_cov)&&
+                      binsof(data_bit_num_cov)&&binsof(parity_type_cov) &&binsof(rx_cov);
+    }
+    CVP_PARITY_TYPE: cross   parity_en_cov, parity_type_cov,rx_cov,data_bit_num_cov,stop_bit_num_cov{
+      option.cross_auto_bin_max = 0;
+      bins odd = binsof(parity_type_cov.odd_parity) && binsof(parity_en_cov.enable)&&
+                     binsof(data_bit_num_cov)&&binsof(stop_bit_num_cov) &&binsof(rx_cov);
+      bins even = binsof(parity_type_cov.even_parity) && binsof(parity_en_cov.enable)&&
+                      binsof(data_bit_num_cov)&&binsof(stop_bit_num_cov) &&binsof(rx_cov);
+    }
+
+  endgroup
 endclass
 
 function Scoreboard::new(string name, out_box_type driver_mbox, rx_box_type receiver_mbox);
@@ -48,6 +136,9 @@ function Scoreboard::new(string name, out_box_type driver_mbox, rx_box_type rece
   receiver_mbox       = new();
   this.driver_mbox    = driver_mbox;
   this.receiver_mbox  = receiver_mbox;
+
+
+  all_opeation_receive =new();
 endfunction
 
 task Scoreboard::start();
@@ -66,7 +157,7 @@ task Scoreboard::start();
 		       end
 		       else 
 		       begin
-f			       #1;
+			       #1;
 		       end
 	       end
        join_none
@@ -253,6 +344,13 @@ else begin
     num_tests_failed++;
     $display("[CHECK PARITY_ERROR ERROR] PARITY_ERROR ERROR \n\n");
 end
+
+
+
+all_opeation_receive.sample();
+coverage1 = all_opeation_receive.get_coverage();
+$display ($time, "      [SCOREBOARD -> COVERAGE] Coverage Result for cover 1 At present = %d", coverage1);
+  // $display ($time, "      [SCOREBOARD -> COVERAGE] Coverage Result for cover 2 At present = %d", coverage_value2);
 endtask
 
 task Scoreboard::result();

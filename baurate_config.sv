@@ -1,0 +1,2 @@
+`define FREQUENCY 50000000
+`define BAURATE 115200

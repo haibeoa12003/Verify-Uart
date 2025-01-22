@@ -1,5 +1,6 @@
 
 // `timescale 1ns/1ps
+`include "baurate_config.sv"
 module uart_test_top;
 	parameter simulation_cycle = 20;
 

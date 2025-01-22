@@ -1,29 +1,14 @@
-C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv
+C:/Users/84334/Downloads/UART_DV_19/final_project/baurate_config.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/baurate_config.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling package uart_tb_sv_unit
-** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
--- Compiling program uart_test
-** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: ScoreBoard.sv(43): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
-** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling interface uart_io
 
 Top level modules:
-	uart_test
+	--none--
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling module uart_test_top
-
-Top level modules:
-	uart_test_top
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:
@@ -37,21 +22,71 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	rx_checker_module
 
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-
-Top level modules:
-	--none--
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_if.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
--- Compiling interface uart_io
-
-Top level modules:
-	--none--
-
 } {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Generator.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+** Warning: ** while parsing file included at C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv(3)
+** at ScoreBoard.sv(96): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ** while parsing file included at C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv(3)
+** at ScoreBoard.sv(103): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ** while parsing file included at C:/Users/84334/Downloads/UART_DV_19/final_project/uart_tb.sv(3)
+** at ScoreBoard.sv(121): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+-- Compiling package uart_tb_sv_unit
+** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
+** Warning: ScoreBoard.sv(96): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(103): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(121): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
+** Warning: ScoreBoard.sv(91): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(86): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(81): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(74): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(67): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(60): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(55): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(50): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: ScoreBoard.sv(45): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+-- Compiling program uart_test
+** Warning: OutputPacket.sv(17): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at OutputPacket.sv(14) for strict LRM compliance.
+** Warning: ScoreBoard.sv(96): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(103): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(121): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'driver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: ScoreBoard.sv(131): (vlog-2217) No default specified for 'receiver_mbox'.  Default must match the value specified in class at ScoreBoard.sv(37) for strict LRM compliance.
+** Warning: Receiver.sv(22): (vlog-2217) No default specified for 'name'.  Default must match the value specified in class at Receiver.sv(16) for strict LRM compliance.
+
+Top level modules:
+	uart_test
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/OutputPacket.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(96): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(103): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(121): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(91): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(86): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(81): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(74): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(67): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(60): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(55): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(50): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv(45): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 
 Top level modules:
 	--none--
@@ -63,19 +98,20 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	uart
 
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/uart_test_top.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module uart_test_top
+
+Top level modules:
+	uart_test_top
+
+} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Receiver.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+
+Top level modules:
+	--none--
+
 } {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Packet.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-
-Top level modules:
-	--none--
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Driver.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-
-Top level modules:
-	--none--
-
-} {} {}} C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/84334/Downloads/UART_DV_19/final_project/Scoreboard.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 
 Top level modules:

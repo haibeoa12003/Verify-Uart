@@ -1,4 +1,5 @@
 `include "Packet.sv"
+`include "baurate_config.sv"
 class Driver ;
     virtual   uart_io.TB uart;	
 	string    name;		
@@ -67,7 +68,8 @@ endtask
 
 
 task Driver::send_payload();
-    int clock_divide = 435;
+    int clock_divide =(`FREQUENCY*1.0)/`BAURATE; 
+
     int count_data_bit_num = 0;
     bit [7:0] temp_8_data;
     bit [6:0] temp_7_data;
@@ -96,42 +98,42 @@ task Driver::send_payload();
     else if (payload_data_bit_num == 2'b11) count_data_bit_num = 8;
     //count stop_bit_num
 
-	$display($time, "ns:  [DRIVER] Sending Payload Begin");
-        wait(uart.cb.rx_done == 1);
+	    $display($time, "ns:  [DRIVER] Sending Payload Begin");
+        $display("Clock Divide = %d", clock_divide);
         uart.cb.parity_en <= payload_parity_en;
         uart.cb.parity_type <= payload_parity_type;
         uart.cb.data_bit_num <= payload_data_bit_num;
         uart.cb.stop_bit_num <= payload_stop_bit_num;
         
-         @(posedge uart.clk);
+         @(posedge uart.cb);
          uart.cb.rx <= 1'b1;
-        repeat(clock_divide) @(posedge uart.clk);
+        repeat(clock_divide) @(posedge uart.cb);
          //start_bit
         uart.cb.rx <= 1'b0;
-        repeat(clock_divide) @(posedge uart.clk);
+        repeat(clock_divide) @(posedge uart.cb);
         //data
 	    for(int i=0 ; i < count_data_bit_num ; i++) begin
 	        if(count_data_bit_num == 8) begin
                 uart.cb.rx <= temp_8_data[i];
-                 repeat(clock_divide) @(posedge uart.clk);
+                 repeat(clock_divide) @(posedge uart.cb);
             end
             else if(count_data_bit_num == 7) begin
             uart.cb.rx <= temp_7_data[i];
-             repeat(clock_divide) @(posedge uart.clk);
+             repeat(clock_divide) @(posedge uart.cb);
             end
             else if(count_data_bit_num == 6) begin
             uart.cb.rx <= temp_6_data[i];
-             repeat(clock_divide) @(posedge uart.clk);
+             repeat(clock_divide) @(posedge uart.cb);
             end
             else if(count_data_bit_num == 5) begin
              uart.cb.rx <= temp_5_data[i];
-              repeat(clock_divide) @(posedge uart.clk);
+              repeat(clock_divide) @(posedge uart.cb);
         end
 	    end
         //parity_bit
         if(payload_parity_en == 1) begin
             uart.cb.rx <= payload_parity_bit;
-            repeat(clock_divide) @(posedge uart.clk);
+            repeat(clock_divide) @(posedge uart.cb);
         end
         // stop_bit
         if(payload_stop_bit_num == 1'b0) begin
@@ -139,11 +141,11 @@ task Driver::send_payload();
         end
         else if(payload_stop_bit_num == 1'b1) begin
             uart.cb.rx <= 1'b1;
-            repeat(clock_divide) @(posedge uart.clk);
+            repeat(clock_divide) @(posedge uart.cb);
             uart.cb.rx <= 1'b1;
             // repeat(clock_divide) @(posedge uart.clk);
         end
-        repeat(clock_divide) @(posedge uart.clk);
+        repeat(clock_divide) @(posedge uart.cb);
         @(negedge uart.cb.rts_n);
 	// This is where we would be sending the data out into a queue for the Scoreboard
 endtask
